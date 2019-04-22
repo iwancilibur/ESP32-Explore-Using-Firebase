@@ -13,27 +13,5 @@ Menghubungkan Mikrokontroller ESP32 dengan "Backend" Google firebase (realtime d
 10. Upload Frontend to Web Hosting Service
 
 Now, You can Monitor and Control IOT Device from Web Browser using Internet Connection, Happy Makers ^_^
-
-
-Lets Go :
-
-1.Create and Configure Firebase Account
--Create or login to your Gmail Account
--Go to https://firebase.google.com
--Create Database
--Edite Rule, Like this:
-
-{
-  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
-  "rules": {
-    ".read": true,
-    ".write": true
-  }
-}
-
--Publish
-
-2.Get Your Authentication Token for your Firebase on Privacy and Setting
-  ex_ 0QuTPAXe5zdg1iSCtGdNvuFU6xiWAlje58LAVI5U
   
 Happy Coding:
