@@ -1,4 +1,4 @@
-# ESP32-Explore-with-Firebase
+# ESP32-Explore-Using-Firebase
 Menghubungkan Mikrokontroller ESP32 dengan "Backend" Google firebase (realtime database) dan di Tampilkan di Dashboard Bootstrap "Frontend"
 
 1. Instal IDE programming ex_ (Arduino IDE, PlatformIO, Microsoft Visual Studio Code, etc)
