@@ -1,0 +1,392 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>IOT DASHBOARD</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- nalika Icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/nalika-icon.css">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/morrisjs/morris.css">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="css/metisMenu/metisMenu-vertical.css">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="js/touchTouch.jquery.js"></script>
+	
+	<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    
+	 
+     <!-- CSS dari web -->
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+   <style>
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: 100px;
+	  
+    }
+
+    .switch input {display:none;}
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 85px;
+      width: 85px;
+      left: 10px;
+      bottom: 7px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(200px);
+      -ms-transform: translateX(200px);
+      transform: translateX(200px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 150px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    </style>
+<script>if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
+<script>
+jQuery(window).load(function () {
+    $x = $(window).width();
+    if ($x > 1024) {
+        jQuery("#content .row").preloader();
+    }
+    jQuery('.magnifier').touchTouch();
+    jQuery('.spinner').animate({
+        'opacity': 0
+    }, 1000, 'easeOutCubic', function () {
+        jQuery(this).css('display', 'none')
+    });
+});
+</script>
+
+	<script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+	
+</head>
+
+<body>
+    <!-- Halaman Awal Web -->
+	<script src="fbtoform.js"></script>
+	
+    <div class="left-sidebar-pro">
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a> 
+                <strong><img src="img/IoT.png" alt="" /></strong>
+            </div>
+			<div class="nalika-profile">
+				<div class="profile-dtl">
+					<a href="#"><img src="img/IoT.png" alt="" /></a>
+					<h2>Interactive <span class="min-dtn">Robotics</span></h2>
+				</div>
+				<div class="profile-social-dtl">
+					<ul class="dtl-social">
+						<li><a href="#"><i class="icon nalika-facebook"></i></a></li>
+						<li><a href="#"><i class="icon nalika-twitter"></i></a></li>
+						<li><a href="#"><i class="icon nalika-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+                <nav class="sidebar-nav left-sidebar-menu-pro">
+                    <ul class="metismenu" id="menu1">
+                        <li class="active">
+                            <a class="has-arrow" href="index.html">
+								   <i class="icon nalika-home icon-wrap"></i>
+								   <span class="mini-click-non">Menu</span>
+								</a>
+                        </li>
+                                             
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+    </div>
+    <!-- Start Welcome area -->
+    <div class="all-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="logo-pro">
+                        <a href="index.html"><img class="main-logo" src="" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-advance-area">
+            
+            
+            <!-- Mobile Menu end -->
+            <div class="breadcome-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="breadcome-list">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-wp">
+											<div class="breadcomb-icon">
+												<i class="icon nalika-home"></i>
+											</div>
+											<div class="breadcomb-ctn">
+												<h2>Hallo Makers Indonesia</h2>
+												<p>Yuk Belajar IOT <span class="bread-ntd">"Internet Of Things"</span></p>
+											</div>
+										</div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="breadcomb-report">
+											<button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="icon nalika-download"></i></button>
+										</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="traffic-analysis-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="white-box tranffic-als-inner">
+                            <h3 class="box-title"><small class="pull-right m-t-10 text-success last-month-sc cl-one"><i class="fa fa-sort-asc"></i> Satuan / %</small>Kelembaban</h3>
+                            <div style="background-color:rgb(54, 194, 219);"> <!--memberikan warna biru untuk background kotak konten-->
+                               
+								Kelembaban : <h1 id="kelembaban"></h1> <!--Memberikan nama kelembaban, diberi ukuran sebesar h1 dan diberi id kelembabansesuai dengan nama di firebase database-->
+								clock     : <waktu></waktu> <!--Memberikan nama clock berisikan value dari waktu1-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="white-box tranffic-als-inner res-mg-t-30">
+                            <h3 class="box-title"><small class="pull-right m-t-10 text-danger last-month-sc cl-two"><i class="fa fa-sort-desc"></i> Satuan / Derajat</small>Suhu</h3>
+                            <div style="background-color:rgb(218, 11, 11);"> <!--memberikan warna merah untuk background kotak konten-->
+                                
+								Suhu : <h1 id="suhu"></h1> <!--Memberikan nama suhu, diberi ukuran sebesar h1 dan diberi id suhu sesuai dengan nama di firebase database-->
+								clock     : <waktu2></waktu2> <!--Memberikan nama clock berisikan value dari waktu2-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="white-box tranffic-als-inner res-mg-t-30">
+                            <h3 class="box-title"><small class="pull-right m-t-10 text-success last-month-sc cl-three"><i class="fa fa-sort-asc"></i> Manusia</small>Deteksi</h3>
+                            <div style="background-color:rgb(230, 179, 41);"> <!--memberikan warna kuning untuk background kotak konten-->
+                                
+								Sensor : <h1 id="sensor"></h1> <!--Memberikan nama Toren, diberi ukuran sebesar h1 dan diberi id jarak sesuai dengan nama di firebase database-->
+								clock     : <waktu3></waktu3> <!--Memberikan nama clock berisikan value dari waktu3-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calender-area mg-tb-30" >
+            <div class="container-fluid" >
+                <div class="row" >
+                    <div class="col-md-4 mt-4">
+									<fieldset align="center"> <!-- untuk membuat konten berada di tengah -->
+									<legend style="background-color:rgb(54, 194, 219);">LAMPU 1</legend> <!-- Memberikan nama LAMPU 1 -->
+									<label id="Lampu1" class="switch" name="vehicle" value="Bike"> <!-- Memberikan id dengan nama Lampu1 dengan class switch -->
+									<input type="checkbox" onclick="relay1.set(+this.checked)"> <!-- Memberikan type checkbox dan jika di klik dia akan mengirimkan data kepada variabel relay1 -->
+									<div class="slider round"></div> <!-- Memberikan clas dengan nama slider round supaya berbentuk seperti slide -->
+									</label>		 <!--Memberikan penutup untuk label-->
+									</fieldset>		 <!--Memberikan penutup untuk fieldset-->							
+									</div>
+									
+									<div class="col-md-4 mt-4">
+									<fieldset align="center"> <!-- untuk membuat konten berada di tengah -->
+									<legend style="background-color:rgb(218, 11, 11);">LAMPU 2</legend> <!-- Memberikan nama LAMPU 2 -->
+								    <label id="Lampu2" class="switch" > <!-- Memberikan id dengan nama Lampu2 dengan class switch -->
+									<input type="checkbox" onclick="relay2.set(+this.checked)"> <!-- Memberikan type checkbox dan jika di klik dia akan mengirimkan data kepada variabel relay2 -->
+									<div class="slider round"></div> <!-- Memberikan clas dengan nama slider round supaya berbentuk seperti slide -->
+									</label> <!--Memberikan penutup untuk label-->
+									</fieldset>	 <!--Memberikan penutup untuk fieldset-->
+									</div>
+									
+									<div class="col-md-4 mt-4">
+									<fieldset align="center"> <!-- untuk membuat konten berada di tengah -->
+									<legend style="background-color:rgb(230, 179, 41);">LAMPU 3</legend> <!-- Memberikan nama LAMPU 3 -->
+								    <label id="Lampu3" class="switch" > <!-- Memberikan id dengan nama Lampu3 dengan class switch -->
+									<input type="checkbox" onclick="relay3.set(+this.checked)"> <!-- Memberikan type checkbox dan jika di klik dia akan mengirimkan data kepada variabel relay3 -->
+									<div class="slider round"></div> <!-- Memberikan clas dengan nama slider round supaya berbentuk seperti slide -->
+									</label> <!--Memberikan penutup untuk label-->
+									</fieldset>	<!--Memberikan penutup untuk fieldset-->
+									</div> 
+									
+									
+                </div>
+            </div>
+        </div>
+        <!-- Syntax untuk membuat sebuah Footer -->
+        <div class="footer-copyright-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-copy-right">
+                            <p>Copyright © 2019 <a href="www.interactiverobotics.club">Interactive Robotics</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+	<!-- Koneksi ke Google Firebase
+		============================================ -->
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script> <!--Versi javascript(js) 5.8.2 dari firebase-->  
+	<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+	<script src="firebaseconnection.js"></script>
+	
+    <!-- jquery
+		============================================ -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap JS
+		============================================ -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow JS
+		============================================ -->
+    <script src="js/wow.min.js"></script>
+    <!-- price-slider JS
+		============================================ -->
+    <script src="js/jquery-price-slider.js"></script>
+    <!-- meanmenu JS
+		============================================ -->
+    <script src="js/jquery.meanmenu.js"></script>
+    <!-- owl.carousel JS
+		============================================ -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- sticky JS
+		============================================ -->
+    <script src="js/jquery.sticky.js"></script>
+    <!-- scrollUp JS
+		============================================ -->
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <!-- mCustomScrollbar JS
+		============================================ -->
+    <script src="js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/scrollbar/mCustomScrollbar-active.js"></script>
+    <!-- metisMenu JS
+		============================================ -->
+    <script src="js/metisMenu/metisMenu.min.js"></script>
+    <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- sparkline JS
+		============================================ -->
+    <script src="js/sparkline/jquery.sparkline.min.js"></script>
+    <script src="js/sparkline/jquery.charts-sparkline.js"></script>
+    <!-- calendar JS
+		============================================ -->
+    <script src="js/calendar/moment.min.js"></script>
+    <script src="js/calendar/fullcalendar.min.js"></script>
+    <script src="js/calendar/fullcalendar-active.js"></script>
+	<!-- float JS
+		============================================ -->
+    <script src="js/flot/jquery.flot.js"></script>
+    <script src="js/flot/jquery.flot.resize.js"></script>
+    <script src="js/flot/curvedLines.js"></script>
+    <script src="js/flot/flot-active.js"></script>
+    <!-- plugins JS
+		============================================ -->
+    <script src="js/plugins.js"></script>
+    <!-- main JS
+		============================================ -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
