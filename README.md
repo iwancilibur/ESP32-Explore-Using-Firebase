@@ -19,9 +19,9 @@ Happy Coding:
 
 Installing the ESP32 Add-on on Arduino IDE
 
-Before Instalation ESP8266
+Before Instalation ESP8266:
 1. Download Arduino IDE https://www.arduino.cc/en/Main/Software
 2. https://dl.espressif.com/dl/package_esp32_index.json  (Link Preference ESP32)
 
-After Instalation ESP8266
+After Instalation ESP8266:
 https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
