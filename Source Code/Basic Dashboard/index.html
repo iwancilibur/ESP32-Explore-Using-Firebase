@@ -1,0 +1,90 @@
+​
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="css/button2.css">
+<link rel="stylesheet" type="text/css" href="css/temp1.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<head>
+<title>Belajar CSS & JS</title>
+</head>
+ 
+<body>
+
+<div class="container">
+  <h2>CONTROL & MONITORING</h2>
+  <p>Belajar IOT "INTERNET OF THINGS" Bersama INTERACTIVE ROBOTICS</p>     
+<div style="overflow-x:auto;">  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Lampu 1</th>
+        <th>Lampu 2</th>
+        <th>Lampu 3</th>
+		<th>Lampu 4</th>
+      </tr>
+    </thead>
+	
+    <tbody>
+      <tr>
+        <td>
+		<div id="Lampu1" class="switch">
+		<input type="checkbox" onclick="relay1.set(+this.checked)">
+		<label><i></i></label>
+		</div> 
+		</td>
+		
+        <td>
+		<div id="Lampu2" class="switch">
+		<input type="checkbox" onclick="relay2.set(+this.checked)">
+		<label><i></i></label>
+		</div> 
+		</td>
+		
+        <td>
+		<div id="Lampu3" class="switch">
+		<input type="checkbox" onclick="relay3.set(+this.checked)">
+		<label><i></i></label>
+		</div> 
+		</td>
+		
+		<td>
+		<div id="Lampu4" class="switch">
+		<input type="checkbox" onclick="relay4.set(+this.checked)">
+		<label><i></i></label>
+		</div> 
+		</td>
+      </tr>
+	  
+	  <tr>
+	    <th>Data Suhu</th>
+        <th>Data Kelembaban</th>
+        <th>Data Ultrasonic</th>
+		<th>Data Cahaya</th>
+	  </tr>
+	  
+	   <tr>
+	    <td><h1 id="suhu"></h1></td>
+        <td><h1 id="kelembaban"></h1></td>
+        <td><h1 id="jarak"></td>
+		<td><h1 id="sensor"></td>
+	  </tr>
+	  
+    </tbody>
+	
+  </table>
+  </div>
+</div>
+
+</body>
+</html>
+	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script> <!--Versi javascript(js) 5.8.2 dari firebase-->  
+	<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+	<script src="js/firebaseconnection.js"></script>
+
+	<script src="js/temp.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		
